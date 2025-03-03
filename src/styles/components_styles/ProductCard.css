@@ -1,0 +1,168 @@
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  margin: 15px;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.wishlist-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #777;
+  transition: all 0.2s ease;
+}
+
+.wishlist-button:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.heart-filled {
+  color: #e91e63;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-name {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.product-price {
+  color: #333333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.product-description {
+  color: #666666;
+  font-size: 0.9rem;
+  margin: 10px 0;
+  line-height: 1.4;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 8px; /* Use gap instead of margin for consistent spacing */
+  align-items: center; /* Ensure buttons are aligned vertically */
+}
+
+.add-to-cart-btn,
+.view-details-btn {
+  padding: 0; /* Reset padding */
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 50%; /* Set equal width for both buttons */
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  height: 38px; /* Set a specific height for both buttons */
+  line-height: 22px; /* Align text vertically */
+  border: 1px solid; /* Give both buttons a border */
+  /* Use flexbox for internal text alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* Standardize font size */
+}
+
+.add-to-cart-btn {
+  background-color: #1b5e20;
+  color: white;
+  margin-right: 0; /* Remove margin since we're using gap */
+  border-color: #1b5e20; /* Same color as background to keep it invisible */
+}
+
+.view-details-btn {
+  background-color: transparent;
+  border: 1px solid #1b5e20;
+  color: #1b5e20;
+}
+
+.add-to-cart-btn:hover,
+.view-details-btn:hover {
+  background-color: #ff9800;
+  border-color: #ff9800;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .product-card {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 100%;
+  }
+
+  .product-actions {
+    flex-direction: column;
+  }
+
+  .add-to-cart-btn,
+  .view-details-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .add-to-cart-btn {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}

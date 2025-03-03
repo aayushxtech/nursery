@@ -1,0 +1,504 @@
+/* Base Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #1e6829; /* Match footer for consistency */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #175622; /* Slightly darker when scrolled */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* General centering improvements */
+.navbar-container {
+  max-width: 1200px; /* Consistent max-width with footer */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-container {
+    padding: 0 2rem;
+  }
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+/* Logo Styles */
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+/* Improved Logo Centering */
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.logo-icon {
+  height: 2rem;
+  width: 2rem;
+  color: #b9e0bd; /* Brighter green */
+  margin-right: 0.5rem;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for better readability */
+}
+
+@media (min-width: 768px) {
+  .logo-text {
+    font-size: 1.25rem;
+  }
+}
+
+.logo-link:hover .logo-text {
+  color: #bbf7d0; /* green-200 */
+}
+
+/* Desktop Navigation Links */
+.navbar-links-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-links-desktop {
+    display: block;
+  }
+}
+
+/* Center navigation links better */
+.nav-links {
+  margin-left: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Improve spacing for better readability */
+.nav-link {
+  position: relative;
+  color: #e8f5e9; /* Slightly off-white for better contrast */
+  text-decoration: none;
+  margin: 0 1.25rem; /* Increased spacing */
+  transition: color 0.3s ease;
+  padding: 0.25rem 0;
+  font-size: 1rem; /* Consistent font size */
+  letter-spacing: 0.01em; /* Subtle letter spacing for readability */
+}
+
+.nav-link:hover {
+  color: #ffffff; /* Pure white on hover */
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5); /* Subtle glow effect */
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: #ffd3a0; /* Softer orange that's easier on the eyes */
+}
+
+.link-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffd3a0; /* Matching softer orange */
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .link-underline,
+.nav-link.active .link-underline {
+  width: 100%;
+}
+
+/* Saved Products Link Styles */
+.nav-link.saved-products {
+  display: flex;
+  align-items: center;
+  color: white; /* orange-400 */
+  background-color: rgba(
+    251,
+    146,
+    60,
+    0.1
+  ); /* Semi-transparent orange background */
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link.saved-products:hover {
+  background-color: rgba(251, 146, 60, 0.2);
+}
+
+.saved-products-icon {
+  display: inline-flex;
+  margin-left: 0.25rem;
+}
+
+.favorite-icon {
+  height: 1rem;
+  width: 1rem;
+  color: #ef4444; /* red-500 */
+}
+
+/* Auth Button Styles */
+.navbar-auth {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-auth {
+    display: block;
+  }
+}
+
+/* Improve readability of buttons */
+.auth-button {
+  display: inline-flex;
+  background-color: #ffa94d; /* Slightly softer orange */
+  color: #2d1703; /* Dark orange-brown for better contrast */
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.auth-button:hover {
+  background-color: #ffc078; /* Lighter on hover */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.auth-button.logout {
+  background-color: #ff8a7a; /* Softer red */
+  color: #4f1c15; /* Dark red for better contrast */
+}
+
+.auth-button.logout:hover {
+  background-color: #ffb0a5; /* Lighter red on hover */
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+.button-icon {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.25rem;
+}
+
+/* Mobile Toggle Button */
+.navbar-toggle {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+.toggle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #fb923c; /* orange-400 */
+}
+
+.toggle-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fb923c; /* orange-400 */
+}
+
+.toggle-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile Menu */
+.navbar-mobile {
+  display: block;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .navbar-mobile {
+    display: none;
+  }
+}
+
+/* Center mobile menu items */
+.mobile-links {
+  padding: 0.5rem;
+  border-top: 1px solid #2d7e3a; /* Lighter border for definition */
+  background-color: #175622; /* Slightly darker for separation */
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.mobile-link {
+  display: block;
+  padding: 0.75rem; /* More padding for better touch targets */
+  border-radius: 0.375rem;
+  color: #e8f5e9; /* Consistent with desktop */
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  font-size: 1.05rem; /* Slightly larger for better readability */
+}
+
+.mobile-link:hover {
+  color: #ffffff;
+  background-color: #1a6027; /* Slightly lighter for hover state */
+}
+
+.mobile-link.active {
+  font-weight: 600;
+  color: #fb923c; /* orange-400 */
+}
+
+/* Mobile Saved Products Link */
+.saved-products-mobile {
+  display: flex !important;
+  align-items: center;
+  background-color: rgba(251, 146, 60, 0.15);
+  color: #fb923c !important;
+}
+
+.saved-products-mobile:hover {
+  background-color: rgba(251, 146, 60, 0.25) !important;
+}
+
+.mobile-favorite-icon {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+  color: #ef4444; /* red-500 */
+}
+
+/* Improve mobile button readability */
+.mobile-auth-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  background-color: #f97316; /* orange-500 */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.mobile-auth-button:hover {
+  background-color: #fb923c; /* orange-400 */
+}
+
+.mobile-auth-button.logout {
+  background-color: #ef4444; /* red-500 */
+}
+
+.mobile-auth-button.logout:hover {
+  background-color: #dc2626; /* red-600 */
+}
+
+.mobile-button-icon {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* Animation for the saved products icon */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.saved-products:hover .favorite-icon,
+.saved-products-mobile:hover .mobile-favorite-icon {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Enhanced Responsive Navbar Styles */
+
+/* Add larger screen breakpoint */
+@media (min-width: 1400px) {
+  .navbar-container {
+    max-width: 1320px;
+  }
+
+  /* Increased spacing for very large screens */
+  .nav-link {
+    margin: 0 1.5rem;
+  }
+}
+
+/* Improved tablet responsiveness */
+@media (max-width: 991px) and (min-width: 768px) {
+  .navbar-content {
+    padding: 0 0.5rem;
+  }
+
+  /* Adjust spacing for medium screens */
+  .nav-links {
+    margin-left: 1rem;
+  }
+
+  .nav-link {
+    margin: 0 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  /* Ensure auth button fits */
+  .auth-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Better mobile responsiveness */
+@media (max-width: 767px) {
+  /* Ensure mobile menu has good UX */
+  .mobile-link {
+    padding: 0.9rem 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+
+  /* More touch-friendly mobile buttons */
+  .mobile-auth-button {
+    padding: 0.9rem 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  /* Add landscape mode handling */
+  @media (orientation: landscape) {
+    .navbar-mobile {
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .mobile-links {
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    .mobile-link {
+      flex: 1 1 40%;
+      min-width: 150px;
+      margin: 0.25rem;
+    }
+
+    .mobile-auth-button {
+      flex: 1 1 40%;
+      min-width: 150px;
+      margin: 0.25rem;
+    }
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  .logo-icon {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  .navbar-content {
+    height: 3.75rem;
+  }
+
+  .toggle-button {
+    padding: 0.4rem;
+  }
+
+  .toggle-icon {
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  .navbar-container {
+    padding: 0 0.75rem;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 0.3rem;
+  }
+}

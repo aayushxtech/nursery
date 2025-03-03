@@ -1,0 +1,1361 @@
+/* Main Footer Styles */
+.footer {
+  background-color: #1e6829; /* Slightly lighter green for better contrast */
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  padding: 4rem 0 1.5rem;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve footer content centering */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Changed from space-between for better centering */
+  gap: 3rem; /* Increased gap for better spacing */
+  padding: 0 1.5rem;
+  align-items: flex-start; /* Align tops of columns */
+}
+
+/* Footer Sections Styling */
+/* Improve footer section sizing for readability */
+.footer-section {
+  flex: 1; /* footer section sizing for readability */
+  min-width: 280px; /* Increased for better content display */
+  max-width: 400px; /* Add max-width to prevent sections from getting too wide */
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-section:hover {
+  transform: translateY(-5px);
+}
+
+/* Logo & Brand Section */
+/* Center brand section contents */
+.brand {
+  box-sizing: border-box; /* Include padding in width calculation */
+  display: flex;
+}
+
+/* Logo & Brand Section */
+/* Center brand section contents */
+.brand {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  align-items: flex-start; /* Left-aligned on desktop for readability */
+  text-align: left;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.footer-logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #a5d6a7; /* Light green color */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  margin-left: 0.75rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-style: italic;
+  color: #b9e0bd; /* Lighter, more vibrant green */
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  font-weight: 500; /* Slightly bolder */
+}
+
+/* Contact Info */
+/* Improve contact info readability */
+.contact-info {
+  margin-top: 1rem;
+  font-style: normal;
+  line-height: 1.7; /* Increased line height */
+  font-size: 1rem; /* Increased font size */
+  color: #e8f5e9; /* Lighter color for better visibility */
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-info strong {
+  color: #b9e0bd; /* Highlight the labels */
+}
+
+/* Quick Links Section */
+/* Improve headings */
+.quick-links h3,
+.connect h3,
+.newsletter h3 {
+  font-size: 1.3rem; /* Larger heading */
+  margin-bottom: 1.5rem; /* More space below heading */
+  position: relative;
+  padding-bottom: 0.7rem;
+  font-weight: 700; /* Make headings bolder */
+  letter-spacing: 0.03em; /* Better letter spacing */
+  color: #e0f2e9; /* Light green-white for better contrast */
+}
+
+.quick-links h3:after,
+.connect h3:after,
+.newsletter h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #b9e0bd; /* Brighter accent color */
+  border-radius: 1px;
+  opacity: 0.9;
+}
+
+/* Two-column links layout */
+/* Improve link columns layout and spacing */
+.links-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto; /* Center grid */
+  justify-content: space-around; /* More even spacing */
+}
+
+.links-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links ul li {
+  margin-bottom: 1.1rem; /* More space between links */
+}
+
+.quick-links ul li a {
+  color: #e8f5e9; /* Slightly off-white for better contrast */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 0.2rem 0;
+  font-size: 1.05rem; /* Slightly larger font */
+  line-height: 1.5; /* Better line height */
+  padding: 4px 0;
+}
+
+.quick-links ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.quick-links ul li a:hover::after {
+  width: 100%;
+}
+
+.quick-links ul li a:hover {
+  color: #ffffff; /* Pure white on hover for better interaction feedback */
+  transform: translateX(5px);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5); /* Subtle glow effect */
+}
+
+.quick-links ul li a:before {
+  content: "→";
+  margin-right: 0.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.quick-links ul li a:hover:before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Social Media Section */
+/* Social icons better alignment */
+.social-icons {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Left-aligned on desktop */
+  gap: 1.5rem;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+/* Fix social media icons alignment */
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 42px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-link::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.social-link:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.social-icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-size: 24px;
+  background-position: center;
+  margin: 0; /* Remove any default margins */
+}
+
+.social-icon:hover {
+  transform: scale(1.15) rotate(5deg);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.instagram {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>');
+}
+
+.facebook {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>');
+}
+
+.twitter {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>');
+}
+
+.whatsapp {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-size: 24px;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Newsletter Section */
+.newsletter {
+  margin-top: 2rem;
+}
+
+.newsletter h3 {
+  margin-bottom: 1.2rem;
+}
+
+.newsletter-form {
+  position: relative;
+  width: 100%; /* Full width */
+  max-width: 100%; /* Ensure it doesn't exceed container */
+  transition: transform 0.3s ease;
+}
+
+.form-group {
+  display: flex;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.newsletter-input {
+  padding: 14px 16px; /* Larger padding */
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  background-color: #f0f8f1; /* Slight green tint for a cohesive look */
+  transition: background-color 0.3s ease;
+  color: #1b472c; /* Darker green for text */
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  background-color: white;
+  background: #ffffff;
+  border-color: #b9e0bd;
+  box-shadow: 0 0 0 3px rgba(185, 224, 189, 0.2);
+  transform: translateY(-1px);
+}
+
+.newsletter-input::placeholder {
+  color: #64a06a; /* Medium green for placeholder text */
+  opacity: 0.8;
+}
+
+.subscribe-button {
+  background-color: #b9e0bd; /* Brighter button */
+  color: #1b472c; /* Darker text for contrast */
+  border: none;
+  padding: 14px 24px; /* Larger padding */
+  cursor: pointer;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 12px 24px;
+  background: #b9e0bd;
+  color: #1b472c;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.subscribe-button:hover {
+  background-color: #9fd3a4; /* Slightly darker on hover */
+  color: #0f2b1b; /* Even darker text on hover */
+  transform: translateY(-1px);
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-button:active {
+  transform: translateY(1px);
+  transform: translateY(0);
+}
+
+.subscribe-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.subscribe-button.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1b472c;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 0.6s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.form-feedback {
+  min-height: 24px;
+  margin-top: 8px;
+}
+
+.success-message {
+  display: flex;
+  align-items: center;
+  color: #a5d6a7;
+  font-size: 0.9rem;
+  animation: fadeIn 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #b9e0bd;
+  font-size: 0.95rem;
+  animation: slideUpFade 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.check-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Bottom */
+/* Footer bottom improved readability */
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15); /* Slightly more visible separator */
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 1.5rem 1.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-nav a {
+  color: #d0e8d5; /* Slightly brighter color */
+}
+
+.footer-nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+copyright {
+  color: #a5c7aa; /* Softer color for less important text */
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #b9e0bd; /* Match other interactive elements */
+  color: #1b472c; /* Darker green for contrast */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+.back-to-top:hover {
+  background-color: #9fd3a4; /* Darker on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:active {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .footer-content {
+    gap: 3rem;
+  }
+
+  .links-grid {
+    gap: 1rem;
+  }
+}
+
+/* Enhanced mobile alignment */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footer-section {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .brand {
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .quick-links h3:after,
+  .connect h3:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .links-grid {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .links-column {
+    min-width: 120px;
+  }
+
+  .quick-links ul li a:hover {
+    transform: translateX(0);
+  }
+
+  .newsletter {
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Center content on mobile */
+  .brand,
+  .quick-links,
+  .connect {
+    text-align: center;
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* Better spacing on mobile */
+  .footer-content {
+    gap: 3rem;
+  }
+
+  /* Make links more readable on mobile */
+  .quick-links ul li a {
+    padding: 5px 0;
+    display: inline-block;
+  }
+
+  /* Center headings underlines */
+  .quick-links h3:after,
+  .connect h3:after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Wider underline */
+  }
+
+  /* Mobile navbar improvements */
+  .navbar-links-desktop {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-section,
+  .footer-section h3,
+  .quick-links,
+  .links-grid,
+  .links-column ul,
+  .links-column ul li,
+  .newsletter {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .brand {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content {
+    width: 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Ensure links are centered */
+  .links-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px; /* Limit width for better centering */
+  }
+
+  .links-column ul {
+    display: inline-block;
+    .links-column {
+      text-align: auto; /* Keep text left-aligned for readability */
+      margin: 0 auto;
+    }
+    margin: 0 1rem;
+    text-align: center;
+    /* Center underlines properly */
+    .quick-links h3:after,
+    .connect h3:after {
+      left: 50%;
+      align-content: center;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+  }
+
+  .social-link {
+    height: 46px;
+    width: 46px;
+  }
+
+  .social-icon {
+    background-size: 26px;
+  }
+
+  .form-group {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .newsletter-input,
+  .subscribe-button {
+    padding: 14px 20px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Small screen specific fixes */
+@media screen and (max-width: 500px) {
+  .contact-info p,
+  .tagline,
+  .footer-content {
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  .links-grid {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .links-column ul {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .links-column ul li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .links-column ul li a {
+    padding: 0.5rem 0;
+    width: auto;
+    display: inline-block;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .newsletter-input,
+  .subscribe-button {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .subscribe-button {
+    margin-top: 8px;
+  }
+
+  .footer-section {
+    padding: 0;
+    min-width: 100%; /* Full width on small screens */
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  /* Extra spacing for very small screens */
+  .footer-content {
+    padding: 0 1rem;
+  }
+
+  /* Larger touch targets on small screens */
+  .footer-nav a {
+    padding: 8px 0;
+  }
+}
+
+/* Additional styling for centering */
+.links-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.links-list li {
+  margin-bottom: 1rem;
+}
+
+/* Fix heading underlines for better centering */
+
+/* Heading and underline fixes for desktop */
+.quick-links h3,
+.connect h3,
+.newsletter h3 {
+  position: relative;
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.5rem;
+  text-align: left; /* Left-aligned on desktop */
+  display: inline-block; /* This makes the underline match the text width */
+  width: auto;
+}
+
+.quick-links h3:after,
+.connect h3:after,
+.newsletter h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Make underline match text width exactly */
+  height: 3px;
+  background-color: #a5d6a7;
+  border-radius: 3px;
+}
+
+/* Mobile fixes for heading underlines */
+@media screen and (max-width: 768px) {
+  .footer-section h3 {
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quick-links h3:after,
+  .connect h3:after,
+  .newsletter h3:after {
+    /* Centered underline that matches the text width */
+    left: 0;
+    width: 100%;
+  }
+
+  /* Align headings centrally in their containers */
+  .quick-links,
+  .connect,
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Fix newsletter heading alignment specifically */
+  .newsletter {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .newsletter h3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Remove any nested selector that might be causing issues */
+.links-column ul .links-column {
+  text-align: center;
+}
+
+/* Ensure newsletter properly centered on mobile */
+@media screen and (max-width: 500px) {
+  .quick-links h3,
+  .connect h3,
+  .newsletter h3 {
+    width: auto;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .subscribe-button {
+    width: 100%;
+  }
+}
+
+/* Improved Responsive Design */
+
+/* Add more breakpoints for better responsiveness */
+@media screen and (max-width: 1200px) {
+  .footer-content {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-section {
+    min-width: 240px;
+    padding: 0 1rem;
+  }
+}
+
+/* Tablet Optimization */
+@media screen and (max-width: 900px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-content {
+    gap: 2.5rem;
+  }
+
+  .footer-section {
+    flex-basis: calc(50% - 2rem);
+    max-width: 100%;
+  }
+
+  /* Ensure two columns on tablet */
+  .brand {
+    order: 1;
+    margin-right: 0;
+  }
+
+  .quick-links {
+    order: 2;
+  }
+
+  .connect {
+    order: 3;
+    margin-top: 1rem;
+  }
+
+  /* Consistent width across devices */
+  .newsletter-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Improved Mobile Styles */
+@media screen and (max-width: 768px) {
+  .footer-section {
+    flex-basis: 100%;
+    padding: 0 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Ensure better spacing and alignment */
+  .footer-section:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Fix mobile heading underline issue */
+  .quick-links h3:after,
+  .connect h3:after,
+  .newsletter h3:after {
+    width: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Better mobile nav links */
+  .links-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  /* Fix orientation on screen rotation */
+  @media (orientation: landscape) {
+    .footer-content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .footer-section {
+      flex-basis: calc(50% - 1rem);
+      margin-bottom: 2rem;
+    }
+  }
+
+  .connect {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .connect h3,
+  .newsletter h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .connect h3::after,
+  .newsletter h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Smaller Mobile Devices */
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 2.5rem 0 1rem;
+  }
+
+  /* Simplify links layout */
+  .links-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .links-column {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Better form layout for tiny screens */
+  .form-group {
+    flex-direction: column;
+  }
+
+  .newsletter-input {
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  .subscribe-button {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  /* Fix content spacing */
+  .footer-section {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Handle content overflow */
+  .tagline,
+  .contact-info p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
+
+/* Special rule for tiny devices */
+@media screen and (max-width: 320px) {
+  .footer-content {
+    padding: 0 0.5rem;
+  }
+
+  /* Fix font sizes on very small screens */
+  .footer {
+    font-size: 0.9rem;
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .quick-links h3,
+  .connect h3,
+  .newsletter h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Stack navigation links */
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Connect Section Improvements */
+.connect {
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+.connect h3,
+.newsletter h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.8rem;
+  display: inline-block;
+}
+
+.connect h3::after,
+.newsletter h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #b9e0bd;
+  transition: width 0.3s ease;
+}
+
+/* Newsletter Section Improvements */
+.newsletter {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.newsletter-form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.newsletter-input:focus {
+  background-color: #ffffff;
+  border-color: #b9e0bd;
+}
+
+.subscribe-button {
+  padding: 12px 24px;
+  background-color: #b9e0bd;
+  color: #1b472c;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.subscribe-button:hover {
+  background-color: #ffffff;
+  color: #1b472c;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness Improvements */
+@media screen and (max-width: 768px) {
+  .connect {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .connect h3,
+  .newsletter h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .connect h3::after,
+  .newsletter h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Success Message Improvements */
+.success-message {
+  color: #b9e0bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Connect and Newsletter Section Alignment Fixes */
+.footer-section.connect {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 350px;
+  margin: 0;
+}
+
+.connect h3,
+.newsletter h3 {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+.connect h3::after,
+.newsletter h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #b9e0bd;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.newsletter {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.newsletter-form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Mobile Alignment Fixes */
+@media screen and (max-width: 768px) {
+  .footer-section.connect {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .connect h3,
+  .newsletter h3 {
+    text-align: center;
+  }
+
+  .connect h3::after,
+  .newsletter h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-form {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .subscribe-button {
+    width: 100%;
+  }
+}
+
+/* Enhanced Mobile Experience */
+@media (hover: none) {
+  .footer-section:hover {
+    transform: none;
+  }
+
+  .quick-links ul li a:hover {
+    transform: none;
+  }
+
+  .social-link:hover .social-icon {
+    transform: none;
+  }
+}

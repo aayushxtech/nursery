@@ -1,0 +1,554 @@
+/* General Styles */
+:root {
+  --primary-green: #2e7d32;
+  --dark-green: #1b5e20;
+  --light-green: #e8f5e9;
+  --accent-orange: #ff9800;
+  --text-color: #333333;
+  --light-gray: #f5f5f5;
+}
+
+.home-container {
+  max-width: 100vw !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  font-family: "Arial", sans-serif;
+  color: var(--text-color);
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-green);
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/hero-nursery.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--accent-orange);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #f57c00;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured Products Section */
+.featured-products {
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.featured-products h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.price {
+  color: var(--primary-green);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.add-to-cart-btn {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--dark-green);
+}
+
+.view-all-btn {
+  background-color: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+/* About Us Section */
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-content {
+  padding-right: 2rem;
+}
+
+.about-content h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+.about-content p {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.learn-more-btn {
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+}
+
+.learn-more-btn:hover {
+  background-color: var(--primary-green);
+}
+
+.about-image {
+  background-image: url("/images/nursery-about.jpg");
+  background-size: cover;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Plant Care Tips */
+.plant-care {
+  background-color: var(--light-green);
+  text-align: center;
+}
+
+.plant-care h2 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.tips-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tip-card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tip-card h3 {
+  margin-bottom: 1rem;
+}
+
+.tips-btn {
+  background-color: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.tips-btn:hover {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+/* Testimonials */
+.testimonials {
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.testimonial-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overscroll-behavior: auto; /* Modern smooth scrolling */
+  scrollbar-color: transparent transparent; /* Modern Firefox */
+  -webkit-scrollbar: none; /* Older WebKit browsers */
+}
+
+.testimonial-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.testimonial-card {
+  flex: 0 0 auto;
+  width: calc(33.333% - 1.5rem);
+  scroll-snap-align: start;
+  background: var(--light-gray);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.03);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.testimonial-card h4 {
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+.community-btn {
+  background-color: var(--accent-orange);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.community-btn:hover {
+  background-color: #f57c00;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: var(--primary-green);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.newsletter h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.newsletter p {
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.newsletter button {
+  background-color: var(--accent-orange);
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 0 4px 4px 0;
+  font-weight: bold;
+}
+
+.newsletter button:hover {
+  background-color: #f57c00;
+}
+
+/* Contact Section */
+.contact {
+  background-color: var(--light-gray);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+}
+
+.contact-form button {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: var(--dark-green);
+}
+
+.social-links {
+  padding: 1rem;
+}
+
+.social-links h3 {
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-green);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+}
+
+.whatsapp {
+  margin-top: 2rem;
+}
+
+.whatsapp a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .testimonial-card {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .about-us {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    width: 85%;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-card {
+    min-width: 100%;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter input {
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter button {
+    border-radius: 4px;
+  }
+}
+
+/* Ensure content fits within viewport */
+@media (min-width: 1200px) {
+  .products-grid,
+  .tips-container,
+  .testimonial-carousel,
+  .about-us,
+  .contact-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
