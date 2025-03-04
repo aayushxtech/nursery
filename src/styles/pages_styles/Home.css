@@ -454,10 +454,6 @@ button {
   transform: translateY(-5px);
 }
 
-.whatsapp {
-  margin-top: 2rem;
-}
-
 .whatsapp a {
   color: var(--primary-green);
   text-decoration: none;

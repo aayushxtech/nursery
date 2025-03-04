@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/components_styles/ProductCard.css";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const ProductCard = ({ product = {} }) => {
   const {

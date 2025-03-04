@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/components_styles/Navbar.css";
 
 const Navbar = () => {
@@ -52,7 +53,7 @@ const Navbar = () => {
         <div className="navbar-content">
           {/* Logo - Centered vertically */}
           <div className="navbar-logo">
-            <a href="/" className="logo-link" aria-label="Home">
+            <Link to="/" className="logo-link" aria-label="Home">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="logo-icon"
@@ -67,33 +68,53 @@ const Navbar = () => {
                 />
               </svg>
               <span className="logo-text">Nursery</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu - Better centered */}
           <div className="navbar-links-desktop">
             <div className="nav-links">
-              <a href="/" className="nav-link active">
+              <Link
+                to="/"
+                className="nav-link active"
+                onClick={() => setIsOpen(false)}
+              >
                 Home
                 <span className="link-underline"></span>
-              </a>
-              <a href="/products" className="nav-link">
+              </Link>
+              <Link
+                to="/products"
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
                 Products
                 <span className="link-underline"></span>
-              </a>
-              <a href="/community" className="nav-link">
+              </Link>
+              <Link
+                to="/community"
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
                 Community
                 <span className="link-underline"></span>
-              </a>
-              <a href="/contact" className="nav-link">
+              </Link>
+              <Link
+                to="/contact"
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
                 Contact
                 <span className="link-underline"></span>
-              </a>
+              </Link>
               {/* Saved Products Link - Only visible when logged in */}
               {isLoggedIn && (
-                <a href="/saved-products" className="nav-link saved-products">
+                <Link
+                  to="/saved-products"
+                  className="nav-link saved-products"
+                  onClick={() => setIsOpen(false)}
+                >
                   Saved Products
-                </a>
+                </Link>
               )}
             </div>
           </div>
@@ -177,23 +198,40 @@ const Navbar = () => {
         }}
       >
         <div className="mobile-links">
-          <a href="/" className="mobile-link active">
+          <Link
+            to="/"
+            className="mobile-link active"
+            onClick={() => setIsOpen(false)}
+          >
             Home
-          </a>
-          <a href="/products" className="mobile-link">
+          </Link>
+          <Link
+            to="/products"
+            className="mobile-link"
+            onClick={() => setIsOpen(false)}
+          >
             Products
-          </a>
-          <a href="/community" className="mobile-link">
+          </Link>
+          <Link
+            to="/community"
+            className="mobile-link"
+            onClick={() => setIsOpen(false)}
+          >
             Community
-          </a>
-          <a href="/contact" className="mobile-link">
+          </Link>
+          <Link
+            to="/contact"
+            className="mobile-link"
+            onClick={() => setIsOpen(false)}
+          >
             Contact
-          </a>
+          </Link>
           {/* Mobile Saved Products - Only visible when logged in */}
           {isLoggedIn && (
-            <a
-              href="/saved-products"
+            <Link
+              to="/saved-products"
               className="mobile-link saved-products-mobile"
+              onClick={() => setIsOpen(false)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +246,7 @@ const Navbar = () => {
                 />
               </svg>
               Saved Products
-            </a>
+            </Link>
           )}
           {/* Mobile login button */}
           <button

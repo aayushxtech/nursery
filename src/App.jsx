@@ -1,7 +1,9 @@
 import "./App.css";
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import Contacts from "./pages/Contacts";
 
 function App() {
   return (
@@ -26,7 +28,11 @@ function App() {
           overflowX: "hidden",
         }}
       >
-        <Products />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contacts />} />
+        </Routes>
       </div>
     </div>
   );
